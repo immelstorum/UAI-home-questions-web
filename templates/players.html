@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lottery Game - Players</title>
+</head>
+<body>
+	<h1>Players:</h1>
+	<ul>
+		{% for player in players %}
+			<li>{{ player }}</li>
+		{% endfor %}
+	</ul>
+	<form action="/add_player" method="post">
+		<label for="name">Add yourself as a player:</label>
+		<input type="text" id="name" name="name">
+		<button type="submit">Add</button>
+	</form>
+</body>
+</html>

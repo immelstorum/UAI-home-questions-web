@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lottery Game - Game</title>
+</head>
+<body>
+	<h1>The game is on!</h1>
+	<p>Here are the results:</p>
+	<ul>
+		{% for player, result in results.items() %}
+			<li>{{ player }}: {{ result }}</li>
+		{% endfor %}
+	</ul>
+	<form action="/winner">
+		<button type="submit">And the winner is...</button>
+	</form>
+</body>
+</html>
